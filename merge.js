@@ -22,12 +22,12 @@ const merge = async function (l, m, r) {
 		if (L[i] <= R[j]) {
 			bars[k] = L[i];
 			barsEl.children[k].style.height = `${L[i]}%`;
-			barsEl.children[k].children[0].innerText = L[i];
+			// barsEl.children[k].children[0].innerText = L[i];
 			i++;
 		} else {
 			bars[k] = R[j];
 			barsEl.children[k].style.height = `${R[j]}%`;
-			barsEl.children[k].children[0].innerText = R[j];
+			// barsEl.children[k].children[0].innerText = R[j];
 			j++;
 		}
 		k++;
@@ -37,7 +37,7 @@ const merge = async function (l, m, r) {
 	while (i < n1) {
 		bars[k] = L[i];
 		barsEl.children[k].style.height = `${L[i]}%`;
-		barsEl.children[k].children[0].innerText = L[i];
+		// barsEl.children[k].children[0].innerText = L[i];
 		i++;
 		k++;
 		await waitforme(Number(speedSlider.value));
@@ -46,7 +46,7 @@ const merge = async function (l, m, r) {
 	while (j < n2) {
 		bars[k] = R[j];
 		barsEl.children[k].style.height = `${R[j]}%`;
-		barsEl.children[k].children[0].innerText = R[j];
+		// barsEl.children[k].children[0].innerText = R[j];
 		j++;
 		k++;
 		await waitforme(Number(speedSlider.value));
@@ -71,7 +71,7 @@ const mergeS = async function (l, r) {
 const doGreen = async function (sz) {
 	for (let i = 0; i < sz; ++i) {
 		barsEl.children[i].style.backgroundColor = "green";
-		await waitforme(20);
+		await waitforme(Number(speedSlider.value));
 	}
 };
 
