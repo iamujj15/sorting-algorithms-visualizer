@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<title>Sorting Visualizer</title>
+	</head>
+	<body>
+		<header>
+			<p class="h1 hd"><strong>Sorting Visualizer</strong></p>
+		</header>
+		<div class="btns">
+			<div class="left-btn">
+				<button class="btn btn-clr" id="new-array" type="button">
+					New Array
+				</button>
+			</div>
+			<div class="slider-container">
+				<input
+					type="range"
+					min="10"
+					max="200"
+					value="20"
+					step="10"
+					name="size"
+					class="slider"
+					id="size"
+				/>
+				<label for="size" class="lbl">Size</label>
+			</div>
+			<div class="slider-container">
+				<input
+					type="range"
+					min="10"
+					max="410"
+					value="60"
+					step="50"
+					name="speed"
+					class="slider"
+					id="speed"
+				/>
+				<label for="speed" class="lbl">Speed</label>
+			</div>
+			<div class="right-btn">
+				<button class="btn reload" id="reload">Reload</button>
+				<button class="btn btn-clr" id="bubble" type="button">
+					Bubble Sort
+				</button>
+				<button class="btn btn-clr" id="selection" type="button">
+					Selection Sort
+				</button>
+				<button class="btn btn-clr" id="insertion" type="button">
+					Insertion Sort
+				</button>
+				<button class="btn btn-clr" id="merge" type="button">
+					Merge Sort
+				</button>
+				<button class="btn btn-clr" id="quick" type="button">
+					Quick Sort
+				</button>
+			</div>
+		</div>
+		<div id="bars">
+			<!-- Bars -->
+		</div>
+		<!-- Will add it in future
+		<footer>
+			<small>🐿️ Ujjwal - 2023</small>
+		</footer>
+        -->
+		<script src="sorting.js"></script>
+		<script src="bubble.js"></script>
+		<script src="selection.js"></script>
+		<script src="insertion.js"></script>
+		<script src="merge.js"></script>
+		<script src="quick.js"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

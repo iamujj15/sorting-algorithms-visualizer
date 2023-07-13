@@ -1,0 +1,142 @@
+* {
+	box-sizing: border-box;
+	margin: 0px;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0px;
+	background-color: #c4d7b2;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+	overflow: hidden;
+	background-color: #a0c49d;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+footer {
+	margin: 50px 0px 0px 0px;
+	text-align: center;
+	padding: 5px;
+	background-color: #e1ecc8;
+	color: #000;
+}
+
+.slider-container {
+	display: inline-block;
+	position: relative;
+	width: 18vw;
+	height: 38px;
+}
+
+.slider {
+	-webkit-appearance: none;
+	appearance: none;
+	vertical-align: middle;
+	margin-left: 1.5vw;
+	width: 12vw;
+	height: 10px;
+	background: #79ae63;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: 0.2s;
+	transition: opacity 0.2s;
+	position: absolute;
+	top: 50%;
+}
+
+.slider:hover {
+	opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	height: 16px;
+	background-color: #04aa6d;
+	cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+	height: 16px;
+	background-color: #04aa6d;
+	cursor: pointer;
+}
+
+.lbl {
+	float: right;
+	height: 100%;
+}
+
+.hd {
+	color: #395144;
+}
+
+.btn-clr {
+	color: #fff;
+	background-color: #9dc08b;
+	border-color: #609966;
+}
+
+.btns {
+	height: 38px;
+}
+
+.left-btn {
+	margin-left: 1.5vw;
+	float: left;
+}
+.right-btn {
+	margin-right: 1.5px;
+	float: right;
+}
+
+.navbar {
+	display: inline;
+}
+
+.bar-prop {
+	width: 8px;
+	height: 100%;
+	border: 1px solid #40514e;
+	background-color: #aa8b56;
+}
+
+.bottom {
+	border: 1px solid #40514e;
+	position: absolute;
+	bottom: -30px;
+	width: 100%;
+	text-align: center;
+}
+
+.disabled {
+	pointer-events: none;
+	cursor: not-allowed;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.rld-div {
+	display: inline-block;
+	margin-left: 1.5vw;
+}
+
+#reload {
+	color: #fff;
+	background-color: #f97b22;
+	border-color: red;
+}
+
+#bars {
+	display: block;
+	height: 80vh;
+	padding: 5%;
+}
