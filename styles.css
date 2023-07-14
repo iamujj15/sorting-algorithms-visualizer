@@ -57,12 +57,16 @@ footer {
 .slider::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	appearance: none;
+	width: 16px;
 	height: 16px;
 	background-color: #04aa6d;
 	cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 16px;
 	height: 16px;
 	background-color: #04aa6d;
 	cursor: pointer;
