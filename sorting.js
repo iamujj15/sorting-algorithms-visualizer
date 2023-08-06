@@ -2,11 +2,13 @@
 
 const barsEl = document.getElementById("bars");
 const sizeSlider = document.getElementById("size");
-const barsRect = barsEl.getBoundingClientRect();
+// const barsRect = barsEl.getBoundingClientRect();
 const btnNewArray = document.getElementById("new-array");
 const btnReload = document.getElementById("reload");
-const barsWidth = barsRect.width;
-const barsHeight = barsRect.height;
+// const barsWidth = barsRect.width;
+// const barsHeight = barsRect.height;
+const barsWidth = barsEl.offsetWidth;
+const barsHeight = barsEl.offsetHeight;
 
 barsEl.innerHTML = "";
 let bars = [];
@@ -19,16 +21,16 @@ const newArray = function () {
 	for (let i = 0; i < Number(sizeSlider.value); ++i)
 		bars.push(Math.floor(Math.random() * 99) + 1);
 
-	const newWidth = (Number(barsWidth) * 0.9) / Number(sizeSlider.value);
+	const newWidth = (Number(barsWidth) * 0.96) / Number(sizeSlider.value);
 
 	for (let i = 0; i < Number(sizeSlider.value); ++i) {
 		const divEl = document.createElement("div");
 		divEl.classList.add("bar-prop");
 		divEl.style.display = "inline-block";
-		divEl.style.width = `${newWidth * 0.88}px`;
-		divEl.style.height = `${Number(bars[i])}%`;
+		divEl.style.width = `${newWidth * 0.94}px`;
+		divEl.style.height = `${Number(bars[i]) * (0.94)}%`;
 		divEl.style.margin = `0 ${0.05 * newWidth}px 0`;
-		divEl.style.marginBottom = `${Number(barsHeight * 0.1)}px`;
+		divEl.style.marginBottom = `${Number(barsHeight * 0.05)}px`;
 		divEl.style.position = "relative";
 		divEl.setAttribute("id", `bar-${i}`);
 

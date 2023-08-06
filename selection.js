@@ -1,6 +1,7 @@
 "use strict";
 
 const selectionSort = async function () {
+	document.getElementById("selection").classList.toggle("active-btn");
 	tempDisable();
 	const barsEl = document.getElementById("bars");
 	const sz = Number(barsEl.childElementCount);
@@ -67,6 +68,7 @@ const selectionSort = async function () {
 	}
 	document.getElementById("new-array").classList.remove("disabled");
 	document.getElementById("size").classList.remove("disabled");
+	document.getElementById("selection").classList.toggle("active-btn");
 };
 
 const btnSelectionSort = document.getElementById("selection");

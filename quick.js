@@ -84,6 +84,7 @@ const quickS = async function (l, r) {
 };
 
 const quickSort = async function () {
+	document.getElementById("quick").classList.toggle("active-btn");
 	tempDisable();
 	const barsEl = document.getElementById("bars");
 	const sz = Number(barsEl.childElementCount);
@@ -91,6 +92,7 @@ const quickSort = async function () {
 	await quickS(0, Number(sz - 1)).then(() => doGreen(sz));
 	document.getElementById("new-array").classList.remove("disabled");
 	document.getElementById("size").classList.remove("disabled");
+	document.getElementById("quick").classList.toggle("active-btn");
 };
 
 const btnQuickSort = document.getElementById("quick");

@@ -1,6 +1,7 @@
 "use strict";
 
 const insertionSort = async function () {
+	document.getElementById("insertion").classList.toggle("active-btn");
 	tempDisable();
 	const barsEl = document.getElementById("bars");
 	const sz = Number(barsEl.childElementCount);
@@ -37,6 +38,7 @@ const insertionSort = async function () {
 	}
 	document.getElementById("new-array").classList.remove("disabled");
 	document.getElementById("size").classList.remove("disabled");
+	document.getElementById("insertion").classList.toggle("active-btn");
 };
 
 const btnInsertionSort = document.getElementById("insertion");

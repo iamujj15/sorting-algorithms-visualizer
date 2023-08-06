@@ -3,6 +3,7 @@
 const speedSlider = document.getElementById("speed");
 
 const bubbleSort = async function () {
+	document.getElementById("bubble").classList.toggle("active-btn");
 	tempDisable();
 	const barsEl = document.getElementById("bars");
 	const sz = Number(barsEl.childElementCount);
@@ -33,6 +34,7 @@ const bubbleSort = async function () {
 	}
 	document.getElementById("new-array").classList.remove("disabled");
 	document.getElementById("size").classList.remove("disabled");
+	document.getElementById("bubble").classList.toggle("active-btn");
 };
 
 const btnBubbleSort = document.getElementById("bubble");

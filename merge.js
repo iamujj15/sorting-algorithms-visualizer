@@ -21,12 +21,12 @@ const merge = async function (l, m, r) {
 	while (i < n1 && j < n2) {
 		if (L[i] <= R[j]) {
 			bars[k] = L[i];
-			barsEl.children[k].style.height = `${L[i]}%`;
+			barsEl.children[k].style.height = `${L[i] * 0.94}%`;
 			// barsEl.children[k].children[0].innerText = L[i];
 			i++;
 		} else {
 			bars[k] = R[j];
-			barsEl.children[k].style.height = `${R[j]}%`;
+			barsEl.children[k].style.height = `${R[j] * 0.94}%`;
 			// barsEl.children[k].children[0].innerText = R[j];
 			j++;
 		}
@@ -36,7 +36,7 @@ const merge = async function (l, m, r) {
 
 	while (i < n1) {
 		bars[k] = L[i];
-		barsEl.children[k].style.height = `${L[i]}%`;
+		barsEl.children[k].style.height = `${L[i] * 0.94}%`;
 		// barsEl.children[k].children[0].innerText = L[i];
 		i++;
 		k++;
@@ -45,7 +45,7 @@ const merge = async function (l, m, r) {
 
 	while (j < n2) {
 		bars[k] = R[j];
-		barsEl.children[k].style.height = `${R[j]}%`;
+		barsEl.children[k].style.height = `${R[j] * 0.94}%`;
 		// barsEl.children[k].children[0].innerText = R[j];
 		j++;
 		k++;
@@ -76,6 +76,7 @@ const doGreen = async function (sz) {
 };
 
 const mergeSort = async function () {
+	document.getElementById("merge").classList.toggle("active-btn");
 	tempDisable();
 	const barsEl = document.getElementById("bars");
 	const sz = Number(barsEl.childElementCount);
@@ -83,6 +84,7 @@ const mergeSort = async function () {
 	await mergeS(0, Number(sz - 1)).then(() => doGreen(sz));
 	document.getElementById("new-array").classList.remove("disabled");
 	document.getElementById("size").classList.remove("disabled");
+	document.getElementById("merge").classList.toggle("active-btn");
 };
 
 const btnMergeSort = document.getElementById("merge");
