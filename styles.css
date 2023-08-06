@@ -206,6 +206,43 @@ footer {
 	background-color: green;
 }
 
+@media screen and (max-width: 950px) {
+	.main-cnt {
+		display: grid;
+		grid-template-rows: 1fr 6fr 1.5fr;
+		grid-template-columns: 1fr;
+		grid-gap: 10px;
+		padding: 20px;
+	}
+
+	.menu {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		/* overflow: auto; */
+		height: 100%;
+	}
+
+	.srt-btn {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 10px;
+		width: 100%;
+	}
+
+	.bars-cnt {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-end;
+		padding: 5px;
+		/* height: 100%; */
+	}
+}
+
 /* --------------------------------------------------------- */
 
 #reload {
