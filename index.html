@@ -15,80 +15,86 @@
 	/>
 	<link rel="stylesheet" href="styles.css" />
 	<title>Sorting Visualizer</title>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8246776799485595"
-     crossorigin="anonymous"></script>
 </head>
 <body>
+	<div class="spcl">
+		<h1 class="h1" style="color: #183024;">Rotate Your Phone </h1>
+		<div>
+			<img src="content/rotate.png" alt="Rotate Phone" width="50px">
+		</div>
+	</div>
 	<div class="root">
 		<header>
-			<a href="/">
+			<a href="/" style="text-decoration: none;">
 				<p class="hd-txt"><strong>Sorting Visualizer</strong></p>
 			</a>
 		</header>
 
 		<div class="main-cnt">
 			<div class="menu">
-				<div>
-					<input
-						type="range"
-						min="10"
-						max="200"
-						value="20"
-						step="10"
-						name="size"
-						class="slider"
-						id="size"
-					/>
-				</div>
-				<div>
-					<label for="size" class="mt-2" style="color: #395144;">Size</label>
-				</div>
-				<div>
-					<input
-						type="range"
-						min="10"
-						max="410"
-						value="60"
-						step="50"
-						name="speed"
-						class="slider"
-						id="speed"
-					/>
-				</div>
-				<div>
-					<label for="speed" class="mt-2" style="color: #395144;">Speed</label>
-				</div>
-				<div>
-					<button class="btn btn-clr mt-2" id="new-array" type="button">
-						New Array
-					</button>
-				</div>
-				<div>
-					<button class="btn reload mt-4 mb-2" id="reload">Reload</button>
+				<div class="othr-btns">
+					<div>
+						<input
+							type="range"
+							min="10"
+							max="200"
+							value="20"
+							step="10"
+							name="size"
+							class="slider"
+							id="size"
+						/>
+					</div>
+					<div>
+						<label for="size" style="color: #395144;">Size</label>
+					</div>
+					<div>
+						<input
+							type="range"
+							min="10"
+							max="410"
+							value="60"
+							step="50"
+							name="speed"
+							class="slider"
+							id="speed"
+						/>
+					</div>
+					<div>
+						<label for="speed" style="color: #395144;">Speed</label>
+					</div>
+					<div>
+						<button class="btn btn-sm btn-clr" id="new-array" type="button">
+							New Array
+						</button>
+					</div>
+					<div>
+						<button class="btn btn-sm reload" id="reload">Reload</button>
+					</div>
 				</div>
 				<div class="srt-btn">
 					<div>
-						<button class="btn btn-clr" id="bubble" type="button">
+						<button class="btn btn-sm btn-clr" id="bubble" type="button">
 							Bubble Sort
 						</button>
 					</div>
 					<div>
-						<button class="btn btn-clr" id="selection" type="button">
+						<button class="btn btn-sm btn-clr" id="selection" type="button">
 							Selection Sort
 						</button>
 					</div>
 					<div>
-						<button class="btn btn-clr" id="insertion" type="button">
+						<button class="btn btn-sm btn-clr" id="insertion" type="button">
 							Insertion Sort
 						</button>
 					</div>
 					<div>
-						<button class="btn btn-clr" id="merge" type="button">
+						<button class="btn btn-sm btn-clr" id="merge" type="button">
 							Merge Sort
 						</button>
 					</div>
 					<div>
-						<button class="btn btn-clr" id="quick" type="button">
+						<button class="btn btn-sm btn-clr" id="quick" type="button">
 							Quick Sort
 						</button>
 					</div>
@@ -97,26 +103,12 @@
 			<div class="bars-cnt" id="bars">
 					<!-- Bars -->
 			</div>
-			<div>
-				<div style="position: relative; width: 100%; max-width: 100%;">
-					<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8246776799485595"
-							crossorigin="anonymous"></script>
-					<!-- HomePageRightAd -->
-					<ins class="adsbygoogle"
-						style="display:block; position: absolute; width: inherit; max-width: inherit;"
-						data-ad-client="ca-pub-8246776799485595"
-						data-ad-slot="8333530099"
-						data-ad-format="auto"
-						data-full-width-responsive="true">
-					</ins>
-					<script>
-						(adsbygoogle = window.adsbygoogle || []).push({});
-					</script>
-				</div>
-			</div>
+			<!-- <div>
+				Future Content Here [Need to Change CSS Grid Column]
+			</div> -->
 		</div>
 		<footer
-			class="d-flex flex-wrap justify-content-space-between align-items-center py-3 border-top"
+			class="py-3 border-top"
 		>
 		<div class="ftr">
 			<div>
@@ -143,8 +135,8 @@
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
+							width="22"
+							height="22"
 							fill="currentColor"
 							class="bi bi-linkedin"
 							viewBox="0 0 16 16"
@@ -159,8 +151,8 @@
 					<a class="text-dark" href="https://github.com/iamujj15">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
+							width="22"
+							height="22"
 							fill="currentColor
 							class="bi bi-github"
 							viewBox="0 0 16 16"
