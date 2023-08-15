@@ -34,6 +34,7 @@ const bubbleSort = async function () {
 	}
 	document.getElementById("random-array").classList.remove("disabled");
 	document.getElementById("reversed-array").classList.remove("disabled");
+	document.getElementById("sorted-array").classList.remove("disabled");
 	document.getElementById("size").classList.remove("disabled");
 	document.getElementById("bubble").classList.toggle("active-btn");
 };

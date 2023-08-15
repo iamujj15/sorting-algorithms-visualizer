@@ -68,6 +68,7 @@ const selectionSort = async function () {
 	}
 	document.getElementById("random-array").classList.remove("disabled");
 	document.getElementById("reversed-array").classList.remove("disabled");
+	document.getElementById("sorted-array").classList.remove("disabled");
 	document.getElementById("size").classList.remove("disabled");
 	document.getElementById("selection").classList.toggle("active-btn");
 };

@@ -5,6 +5,7 @@ const sizeSlider = document.getElementById("size");
 // const barsRect = barsEl.getBoundingClientRect();
 const btnRandomArray = document.getElementById("random-array");
 const btnReversedArray = document.getElementById("reversed-array");
+const btnSortedArray = document.getElementById("sorted-array");
 const btnReload = document.getElementById("reload");
 // const barsWidth = barsRect.width;
 // const barsHeight = barsRect.height;
@@ -13,6 +14,14 @@ const barsHeight = barsEl.offsetHeight;
 
 barsEl.innerHTML = "";
 let bars = [];
+
+const sortedArray = function () {
+	bars = [];
+	for (let i = 1; i <= sizeSlider.value; ++i) {
+		bars.push(i);
+	}
+	plantArray()
+}
 
 const reversedArray = function () {
 	bars = [];
@@ -79,6 +88,7 @@ const swap = function (bar1, bar2) {
 const tempDisable = function () {
 	document.getElementById("random-array").classList.add("disabled");
 	document.getElementById("reversed-array").classList.add("disabled");
+	document.getElementById("sorted-array").classList.add("disabled");
 	document.getElementById("size").classList.add("disabled");
 	document.getElementById("bubble").classList.add("disabled");
 	document.getElementById("merge").classList.add("disabled");
@@ -90,6 +100,7 @@ const tempDisable = function () {
 const tempEnable = function () {
 	document.getElementById("random-array").classList.remove("disabled");
 	document.getElementById("reversed-array").classList.remove("disabled");
+	document.getElementById("sorted-array").classList.remove("disabled");
 	document.getElementById("size").classList.remove("disabled");
 	document.getElementById("bubble").classList.remove("disabled");
 	document.getElementById("merge").classList.remove("disabled");
@@ -100,4 +111,5 @@ const tempEnable = function () {
 
 btnRandomArray.addEventListener("click", randomArray);
 btnReversedArray.addEventListener("click", reversedArray);
+btnSortedArray.addEventListener("click", sortedArray);
 btnReload.addEventListener("click", () => location.reload());
