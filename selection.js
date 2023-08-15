@@ -67,6 +67,7 @@ const selectionSort = async function () {
 		barsEl.children[mxInd].style.borderColor = barDefaultBorderColor;
 	}
 	document.getElementById("random-array").classList.remove("disabled");
+	document.getElementById("reversed-array").classList.remove("disabled");
 	document.getElementById("size").classList.remove("disabled");
 	document.getElementById("selection").classList.toggle("active-btn");
 };

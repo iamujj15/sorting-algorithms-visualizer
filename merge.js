@@ -83,6 +83,7 @@ const mergeSort = async function () {
 
 	await mergeS(0, Number(sz - 1)).then(() => doGreen(sz));
 	document.getElementById("random-array").classList.remove("disabled");
+	document.getElementById("reversed-array").classList.remove("disabled");
 	document.getElementById("size").classList.remove("disabled");
 	document.getElementById("merge").classList.toggle("active-btn");
 };
