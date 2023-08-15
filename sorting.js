@@ -14,13 +14,16 @@ barsEl.innerHTML = "";
 let bars = [];
 
 const randomArray = function () {
+	bars = [];
+	for (let i = 0; i < Number(sizeSlider.value); ++i) {
+		bars.push(Math.floor(Math.random() * 99) + 1);
+	}
+	plantArray()
+}
+
+const plantArray = function () {
 	tempEnable();
 	barsEl.innerHTML = "";
-	bars = [];
-
-	for (let i = 0; i < Number(sizeSlider.value); ++i)
-		bars.push(Math.floor(Math.random() * 99) + 1);
-
 	const newWidth = (Number(barsWidth) * 0.96) / Number(sizeSlider.value);
 
 	for (let i = 0; i < Number(sizeSlider.value); ++i) {
@@ -66,6 +69,7 @@ const swap = function (bar1, bar2) {
 
 const tempDisable = function () {
 	document.getElementById("random-array").classList.add("disabled");
+	document.getElementById("reversed-array").classList.add("disabled");
 	document.getElementById("size").classList.add("disabled");
 	document.getElementById("bubble").classList.add("disabled");
 	document.getElementById("merge").classList.add("disabled");
@@ -85,4 +89,5 @@ const tempEnable = function () {
 };
 
 btnRandomArray.addEventListener("click", randomArray);
+btnReversedArray.addEventListener("click", reversedArray);
 btnReload.addEventListener("click", () => location.reload());
