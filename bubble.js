@@ -32,7 +32,7 @@ const bubbleSort = async function () {
 		}
 		barsEl.children[sz - i - 1].style.backgroundColor = "green";
 	}
-	document.getElementById("new-array").classList.remove("disabled");
+	document.getElementById("random-array").classList.remove("disabled");
 	document.getElementById("size").classList.remove("disabled");
 	document.getElementById("bubble").classList.toggle("active-btn");
 };

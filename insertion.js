@@ -36,7 +36,7 @@ const insertionSort = async function () {
 		barsEl.children[j + 1].style.backgroundColor = "green";
 		barsEl.children[i].style.removeProperty("border-color");
 	}
-	document.getElementById("new-array").classList.remove("disabled");
+	document.getElementById("random-array").classList.remove("disabled");
 	document.getElementById("size").classList.remove("disabled");
 	document.getElementById("insertion").classList.toggle("active-btn");
 };

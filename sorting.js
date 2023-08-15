@@ -3,7 +3,7 @@
 const barsEl = document.getElementById("bars");
 const sizeSlider = document.getElementById("size");
 // const barsRect = barsEl.getBoundingClientRect();
-const btnNewArray = document.getElementById("new-array");
+const btnRandomArray = document.getElementById("random-array");
 const btnReload = document.getElementById("reload");
 // const barsWidth = barsRect.width;
 // const barsHeight = barsRect.height;
@@ -13,7 +13,7 @@ const barsHeight = barsEl.offsetHeight;
 barsEl.innerHTML = "";
 let bars = [];
 
-const newArray = function () {
+const randomArray = function () {
 	tempEnable();
 	barsEl.innerHTML = "";
 	bars = [];
@@ -65,7 +65,7 @@ const swap = function (bar1, bar2) {
 };
 
 const tempDisable = function () {
-	document.getElementById("new-array").classList.add("disabled");
+	document.getElementById("random-array").classList.add("disabled");
 	document.getElementById("size").classList.add("disabled");
 	document.getElementById("bubble").classList.add("disabled");
 	document.getElementById("merge").classList.add("disabled");
@@ -75,7 +75,7 @@ const tempDisable = function () {
 };
 
 const tempEnable = function () {
-	document.getElementById("new-array").classList.remove("disabled");
+	document.getElementById("random-array").classList.remove("disabled");
 	document.getElementById("size").classList.remove("disabled");
 	document.getElementById("bubble").classList.remove("disabled");
 	document.getElementById("merge").classList.remove("disabled");
@@ -84,5 +84,5 @@ const tempEnable = function () {
 	document.getElementById("selection").classList.remove("disabled");
 };
 
-btnNewArray.addEventListener("click", newArray);
+btnRandomArray.addEventListener("click", randomArray);
 btnReload.addEventListener("click", () => location.reload());
