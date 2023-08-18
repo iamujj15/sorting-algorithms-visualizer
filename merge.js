@@ -82,7 +82,9 @@ const mergeSort = async function () {
 	const sz = Number(barsEl.childElementCount);
 
 	await mergeS(0, Number(sz - 1)).then(() => doGreen(sz));
-	document.getElementById("new-array").classList.remove("disabled");
+	document.getElementById("random-array").classList.remove("disabled");
+	document.getElementById("reversed-array").classList.remove("disabled");
+	document.getElementById("sorted-array").classList.remove("disabled");
 	document.getElementById("size").classList.remove("disabled");
 	document.getElementById("merge").classList.toggle("active-btn");
 };

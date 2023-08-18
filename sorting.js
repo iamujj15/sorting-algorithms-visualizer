@@ -3,7 +3,9 @@
 const barsEl = document.getElementById("bars");
 const sizeSlider = document.getElementById("size");
 // const barsRect = barsEl.getBoundingClientRect();
-const btnNewArray = document.getElementById("new-array");
+const btnRandomArray = document.getElementById("random-array");
+const btnReversedArray = document.getElementById("reversed-array");
+const btnSortedArray = document.getElementById("sorted-array");
 const btnReload = document.getElementById("reload");
 // const barsWidth = barsRect.width;
 // const barsHeight = barsRect.height;
@@ -13,14 +15,33 @@ const barsHeight = barsEl.offsetHeight;
 barsEl.innerHTML = "";
 let bars = [];
 
-const newArray = function () {
+const sortedArray = function () {
+	bars = [];
+	for (let i = 1; i <= sizeSlider.value; ++i) {
+		bars.push(i);
+	}
+	plantArray()
+}
+
+const reversedArray = function () {
+	bars = [];
+	for (let i = sizeSlider.value; i > 0; --i) {
+		bars.push(i);
+	}
+	plantArray()
+}
+
+const randomArray = function () {
+	bars = [];
+	for (let i = 0; i < Number(sizeSlider.value); ++i) {
+		bars.push(Math.floor(Math.random() * 99) + 1);
+	}
+	plantArray()
+}
+
+const plantArray = function () {
 	tempEnable();
 	barsEl.innerHTML = "";
-	bars = [];
-
-	for (let i = 0; i < Number(sizeSlider.value); ++i)
-		bars.push(Math.floor(Math.random() * 99) + 1);
-
 	const newWidth = (Number(barsWidth) * 0.96) / Number(sizeSlider.value);
 
 	for (let i = 0; i < Number(sizeSlider.value); ++i) {
@@ -65,7 +86,9 @@ const swap = function (bar1, bar2) {
 };
 
 const tempDisable = function () {
-	document.getElementById("new-array").classList.add("disabled");
+	document.getElementById("random-array").classList.add("disabled");
+	document.getElementById("reversed-array").classList.add("disabled");
+	document.getElementById("sorted-array").classList.add("disabled");
 	document.getElementById("size").classList.add("disabled");
 	document.getElementById("bubble").classList.add("disabled");
 	document.getElementById("merge").classList.add("disabled");
@@ -75,7 +98,9 @@ const tempDisable = function () {
 };
 
 const tempEnable = function () {
-	document.getElementById("new-array").classList.remove("disabled");
+	document.getElementById("random-array").classList.remove("disabled");
+	document.getElementById("reversed-array").classList.remove("disabled");
+	document.getElementById("sorted-array").classList.remove("disabled");
 	document.getElementById("size").classList.remove("disabled");
 	document.getElementById("bubble").classList.remove("disabled");
 	document.getElementById("merge").classList.remove("disabled");
@@ -84,5 +109,7 @@ const tempEnable = function () {
 	document.getElementById("selection").classList.remove("disabled");
 };
 
-btnNewArray.addEventListener("click", newArray);
+btnRandomArray.addEventListener("click", randomArray);
+btnReversedArray.addEventListener("click", reversedArray);
+btnSortedArray.addEventListener("click", sortedArray);
 btnReload.addEventListener("click", () => location.reload());

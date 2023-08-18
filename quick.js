@@ -90,7 +90,9 @@ const quickSort = async function () {
 	const sz = Number(barsEl.childElementCount);
 
 	await quickS(0, Number(sz - 1)).then(() => doGreen(sz));
-	document.getElementById("new-array").classList.remove("disabled");
+	document.getElementById("random-array").classList.remove("disabled");
+	document.getElementById("reversed-array").classList.remove("disabled");
+	document.getElementById("sorted-array").classList.remove("disabled");
 	document.getElementById("size").classList.remove("disabled");
 	document.getElementById("quick").classList.toggle("active-btn");
 };
