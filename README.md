@@ -4,7 +4,7 @@
 </h1>
 
 <h4 align="center">A static website for visualization of various sorting algorithms</h4>
-<h4 align="center"><a href="https://visualsortalgos.netlify.app/" target="_blank" rel="noopener noreferrer"> 🕹 Try it Now! </a></h4>
+<h4 align="center"><a href="https://iamujj15.github.io/sorting-algorithms-visualizer/" target="_blank" rel="noopener noreferrer"> 🕹 Try it Now! </a></h4>
 
 ![demo](https://github.com/iamujj15/sorting-algorithms-visualizer/blob/main/content/sav-demo.gif)
 
